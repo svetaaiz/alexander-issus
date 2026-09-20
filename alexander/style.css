@@ -1,0 +1,1439 @@
+/* =====================================
+   ОСНОВНЫЕ НАСТРОЙКИ
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #fffaf5;
+
+    color: #44372f;
+
+    line-height: 1.7;
+}
+
+:root {
+
+    --cream: #fffaf5;
+
+    --paper: #ffffff;
+
+    --pink: #e99ab0;
+
+    --pink-light: #fde4ea;
+
+    --pink-dark: #c96f8a;
+
+    --brown: #44372f;
+
+    --brown-light: #79675a;
+
+    --yellow: #f3d47b;
+
+    --line: #eadbd0;
+
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    padding: 16px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: rgba(255, 250, 245, 0.93);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--line);
+
+}
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+}
+
+.logo span {
+
+    color: var(--pink);
+
+}
+
+nav {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+nav a {
+
+    color: var(--brown);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+
+}
+
+nav a:hover {
+
+    color: var(--pink-dark);
+
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+
+    max-width: 1100px;
+
+    min-height: 650px;
+
+    margin: auto;
+
+    padding: 80px 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.9fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+}
+
+.badge {
+
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    background: var(--pink-light);
+
+    color: var(--pink-dark);
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+.hero h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(60px, 9vw, 100px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+
+}
+
+.hero h1 span {
+
+    color: var(--pink);
+
+}
+
+.hero-subtitle {
+
+    max-width: 470px;
+
+    color: var(--brown-light);
+
+    margin: 30px 0;
+
+    font-size: 17px;
+
+}
+
+.button {
+
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    border-radius: 50px;
+
+    background: var(--brown);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+
+}
+
+.button:hover {
+
+    background: var(--pink-dark);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =====================================
+   HERO IMAGE
+===================================== */
+
+.hero-picture {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.hero-picture img {
+
+    width: 85%;
+
+    max-width: 390px;
+
+    height: 440px;
+
+    object-fit: cover;
+
+    border-radius: 48% 48% 20px 20px;
+
+    border: 12px solid white;
+
+    box-shadow:
+        15px 15px 0 var(--pink-light),
+        0 15px 40px rgba(100, 70, 50, 0.12);
+
+}
+
+.floating-note {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 0;
+
+    z-index: 2;
+
+    padding: 12px 15px;
+
+    background: var(--yellow);
+
+    border-radius: 15px;
+
+    transform: rotate(6deg);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    box-shadow: 3px 4px 0 rgba(100, 70, 50, 0.08);
+
+}
+
+
+/* =====================================
+   QUICK FACTS
+===================================== */
+
+.quick-facts {
+
+    max-width: 1000px;
+
+    margin: 0 auto 100px;
+
+    padding: 0 30px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+}
+
+.quick-card {
+
+    padding: 20px;
+
+    background: white;
+
+    border: 1px solid var(--line);
+
+    border-radius: 18px;
+
+    text-align: center;
+
+}
+
+.quick-card strong {
+
+    display: block;
+
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    color: var(--pink-dark);
+
+}
+
+.quick-card span {
+
+    display: block;
+
+    font-size: 11px;
+
+    color: var(--brown-light);
+
+}
+
+
+/* =====================================
+   SECTIONS
+===================================== */
+
+.section {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 100px 30px;
+
+}
+
+.section-title {
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-bottom: 50px;
+
+}
+
+.number {
+
+    background: var(--pink);
+
+    color: white;
+
+    padding: 5px 9px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+}
+
+.label {
+
+    color: var(--pink-dark);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+}
+
+.section-title h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(38px, 6vw, 65px);
+
+    line-height: 1;
+
+}
+
+
+/* =====================================
+   BIO
+===================================== */
+
+.bio-layout {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+}
+
+.bio-text {
+
+    font-size: 16px;
+
+    color: var(--brown-light);
+
+}
+
+.bio-text p {
+
+    margin-bottom: 18px;
+
+}
+
+.bio-text b {
+
+    color: var(--brown);
+
+}
+
+
+/* =====================================
+   TIMELINE
+===================================== */
+
+.timeline {
+
+    border-left: 2px solid var(--pink-light);
+
+}
+
+.timeline-item {
+
+    position: relative;
+
+    padding: 0 0 30px 30px;
+
+}
+
+.timeline-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 11px;
+
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    border: 3px solid var(--pink);
+
+    left: -7px;
+
+    top: 3px;
+
+}
+
+.timeline-item.important::before {
+
+    background: var(--pink);
+
+}
+
+.timeline-item > span {
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: var(--pink-dark);
+
+}
+
+.timeline-item h3 {
+
+    margin: 5px 0;
+
+    font-size: 20px;
+
+}
+
+.timeline-item p {
+
+    color: var(--brown-light);
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================
+   CONTEXT
+===================================== */
+
+.context-section {
+
+    max-width: 1050px;
+
+    margin: 30px auto;
+
+    padding: 60px;
+
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    background: #fff0f4;
+
+    border-radius: 35px;
+
+}
+
+.context-section h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+}
+
+.context-section p {
+
+    color: var(--brown-light);
+
+    margin-bottom: 15px;
+
+}
+
+.context-decoration {
+
+    min-height: 250px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    color: var(--pink-dark);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+.circle {
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    font-size: 38px;
+
+    color: var(--pink);
+
+    box-shadow: 5px 5px 0 var(--pink-light);
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =====================================
+   BATTLE
+===================================== */
+
+.battle-card {
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid var(--line);
+
+    border-radius: 30px;
+
+    box-shadow: 10px 10px 0 var(--pink-light);
+
+}
+
+.battle-image {
+
+    position: relative;
+
+}
+
+.battle-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 420px;
+
+    object-fit: cover;
+
+}
+
+.image-label {
+
+    position: absolute;
+
+    left: 20px;
+
+    bottom: 20px;
+
+    padding: 8px 12px;
+
+    background: rgba(255,255,255,0.9);
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+}
+
+.battle-content {
+
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 40px;
+
+    padding: 45px;
+
+}
+
+.battle-date {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--pink-dark);
+
+}
+
+.battle-date strong {
+
+    font-family: Georgia, serif;
+
+    font-size: 60px;
+
+    line-height: 1;
+
+}
+
+.battle-date span {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+.battle-text {
+
+    color: var(--brown-light);
+
+}
+
+.battle-text p {
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =====================================
+   BATTLE STEPS
+===================================== */
+
+.battle-explanation {
+
+    margin-top: 70px;
+
+}
+
+.battle-explanation h3 {
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    margin-bottom: 25px;
+
+}
+
+.battle-steps {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+}
+
+.step {
+
+    padding: 22px;
+
+    background: #fffaf5;
+
+    border: 1px solid var(--line);
+
+    border-radius: 18px;
+
+}
+
+.step-number {
+
+    color: var(--pink-dark);
+
+    font-weight: bold;
+
+    font-size: 12px;
+
+}
+
+.step h4 {
+
+    margin: 15px 0 8px;
+
+}
+
+.step p {
+
+    color: var(--brown-light);
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================
+   MAP
+===================================== */
+
+.map-section {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 60px 30px;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+}
+
+.map-text h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 50px;
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+
+}
+
+.map-text p {
+
+    color: var(--brown-light);
+
+    margin-bottom: 15px;
+
+}
+
+.map-image {
+
+    padding: 12px;
+
+    background: white;
+
+    border: 1px solid var(--line);
+
+    border-radius: 25px;
+
+    transform: rotate(1deg);
+
+}
+
+.map-image img {
+
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+}
+
+
+/* =====================================
+   KNOWLEDGE
+===================================== */
+
+.knowledge-intro {
+
+    max-width: 750px;
+
+    color: var(--brown-light);
+
+    font-size: 17px;
+
+    margin-bottom: 40px;
+
+}
+
+.knowledge-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+.knowledge-card {
+
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid var(--line);
+
+    border-radius: 22px;
+
+    transition: 0.25s;
+
+}
+
+.knowledge-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 5px 7px 0 var(--pink-light);
+
+}
+
+.icon {
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+
+}
+
+.knowledge-card h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+
+}
+
+.knowledge-card p {
+
+    color: var(--brown-light);
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================
+   FACTS
+===================================== */
+
+.facts-section {
+
+    background: #fff0f4;
+
+}
+
+.facts-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+}
+
+.fact-card {
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 22px;
+
+    border: 1px solid var(--line);
+
+}
+
+.fact-number {
+
+    color: var(--pink-dark);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+}
+
+.fact-card h3 {
+
+    font-size: 22px;
+
+    margin: 12px 0;
+
+}
+
+.fact-card p {
+
+    color: var(--brown-light);
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================
+   QUIZ
+===================================== */
+
+.quiz-section {
+
+    padding: 100px 30px;
+
+    background: var(--brown);
+
+    color: white;
+
+}
+
+.quiz-box {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+.quiz-box .label {
+
+    color: var(--yellow);
+
+}
+
+.quiz-box h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+.quiz-box > p {
+
+    color: #dbcfc7;
+
+}
+
+.answers {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+
+}
+
+.answers button {
+
+    border: 1px solid #76675e;
+
+    background: transparent;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: 0.2s;
+
+}
+
+.answers button:hover {
+
+    background: var(--pink);
+
+    border-color: var(--pink);
+
+}
+
+#quiz-result {
+
+    min-height: 30px;
+
+    margin-top: 20px;
+
+    color: var(--yellow);
+
+}
+
+
+/* =====================================
+   SOURCES
+===================================== */
+
+.sources {
+
+    background: #fffaf5;
+
+}
+
+.source-list {
+
+    max-width: 850px;
+
+}
+
+.source {
+
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid var(--line);
+
+}
+
+.source > span {
+
+    color: var(--pink-dark);
+
+    font-weight: bold;
+
+}
+
+.source h3 {
+
+    margin-bottom: 5px;
+
+}
+
+.source p {
+    color: var(--brown-light);
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+    background: #fff0f4;
+
+    color: var(--brown-light);
+
+}
+
+.footer-cat {
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+
+}
+
+footer span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 11px;
+
+}
+
+
+/* =====================================
+   АДАПТАЦИЯ ДЛЯ ПЛАНШЕТА
+===================================== */
+
+@media (max-width: 850px) {
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+    .hero-subtitle {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+    .hero-picture {
+
+        order: -1;
+
+    }
+
+    .hero-picture img {
+
+        width: 55%;
+
+        height: 350px;
+
+    }
+
+    .quick-facts {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .bio-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .context-section {
+
+        grid-template-columns: 1fr;
+
+        margin: 30px 20px;
+
+        padding: 40px;
+
+    }
+
+    .battle-steps {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .map-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* =====================================
+   АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНА
+===================================== */
+
+@media (max-width: 600px) {
+
+    header {
+
+        padding: 14px 20px;
+
+    }
+
+    nav {
+
+        gap: 10px;
+
+    }
+
+    nav a {
+
+        font-size: 11px;
+
+    }
+
+    nav a:nth-child(4),
+    nav a:nth-child(5) {
+
+        display: none;
+
+    }
+
+    .hero {
+
+        min-height: auto;
+
+        padding: 60px 20px 80px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 58px;
+
+        letter-spacing: -3px;
+
+    }
+
+    .hero-picture img {
+
+        width: 70%;
+
+        height: 330px;
+
+    }
+
+    .floating-note {
+
+        right: 5%;
+
+    }
+
+    .quick-facts {
+
+        padding: 0 20px;
+
+        margin-bottom: 50px;
+
+    }
+
+    .quick-card {
+
+        padding: 15px 8px;
+
+    }
+
+    .quick-card strong {
+
+        font-size: 23px;
+
+    }
+
+    .section {
+
+        padding: 70px 20px;
+
+    }
+
+    .section-title h2 {
+
+        font-size: 40px;
+
+    }
+
+    .context-section {
+
+        padding: 30px 25px;
+
+    }
+
+    .context-section h2 {
+
+        font-size: 35px;
+
+    }
+
+    .battle-content {
+
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+
+    }
+
+    .battle-image img {
+
+        height: 280px;
+
+    }
+
+    .battle-date {
+
+        flex-direction: row;
+
+        gap: 10px;
+
+        justify-content: flex-start;
+
+    }
+
+    .battle-date strong {
+
+        font-size: 45px;
+
+    }
+
+    .battle-steps {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .map-section {
+
+        padding: 50px 20px;
+
+    }
+
+    .map-text h2 {
+
+        font-size: 40px;
+
+    }
+
+    .map-image img {
+
+        height: 250px;
+
+    }
+
+    .knowledge-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .facts-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .quiz-box h2 {
+
+        font-size: 35px;
+
+    }
+
+    .answers {
+
+        flex-direction: column;
+
+    }
+
+    .answers button {
+
+        width: 100%;
+
+    }
+
+}
